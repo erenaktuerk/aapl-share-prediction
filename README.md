@@ -27,8 +27,6 @@ This work is crafted to demonstrate real-world expertise in data science and mac
 │   ├── 📂 raw                  # Original raw dataset (CSV format)
 │   ├── 📂 processed            # Preprocessed and cleaned dataset
 │
-│── 📂 utils                    # Utility scripts (logging, feature selection, etc.)
-│
 │── 📂 models                   
 │   ├── xgboost_model.py        # XGBoost regression model implementation
 │   ├── mlp_model.py            # TensorFlow MLP model implementation

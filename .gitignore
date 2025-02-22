@@ -1,0 +1,42 @@
+# Ignore the virtual environment
+venv/
+.env/
+
+# Ignore compiled Python files
+_pycache_/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+*.iml
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore machine learning models and logs
+logs/
+*.h5
+*.ckpt
+*.pth
+*.pt
+*.tflite
+*.pb
+
+# Ignore cache and debug files
+.cache/
+debug.log
+
+# Ignore processed data but keep raw data
+data/processed/

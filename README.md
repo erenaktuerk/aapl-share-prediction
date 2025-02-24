@@ -1,175 +1,175 @@
-AAPL Stock Price Prediction using Machine Learning
+AAPL Share Price Prediction using Machine Learning
 
 📌 Overview
 
-This project is a highly optimized stock price prediction system that leverages advanced regression models to predict Apple Inc. (AAPL) stock prices. It is designed to showcase state-of-the-art machine learning techniques with a strong focus on practical implementation, performance tuning, and feature engineering.
+This project focuses on predicting the stock prices of Apple Inc. (AAPL) using machine learning techniques. With a strong emphasis on real-world application, the project leverages two state-of-the-art models: XGBoost and a Multi-Layer Perceptron (MLP) implemented in TensorFlow. The model comparison is automated, ensuring that the best-performing model is selected for further evaluation.
 
-The project compares XGBoost, a powerful gradient boosting algorithm, with a Multi-Layer Perceptron (MLP) neural network implemented in TensorFlow. The model selection is fully automated, ensuring that only the best-performing model is used for evaluation and visualization.
-
-This work is crafted to demonstrate real-world expertise in data science and machine learning, making it an ideal portfolio project for a Machine Learning Engineer role.
+This project showcases a highly optimized pipeline with a focus on data preprocessing, feature engineering, hyperparameter tuning, and model evaluation. It is designed to impress companies looking for practical, production-ready machine learning solutions.
 
 🚀 Key Features
 
-✔ Data Preprocessing: Clean and transform stock market data efficiently.
-✔ Feature Engineering: Select the most impactful features for prediction.
-✔ Model Selection: Compare and choose the best regression model (XGBoost vs. MLP).
-✔ Hyperparameter Optimization: Use RandomizedSearchCV to fine-tune model parameters.
-✔ Cross-Validation: Implement robust k-fold cross-validation for better generalization.
-✔ Feature Importance Analysis: Identify key factors influencing stock prices.
-✔ Automated Logging & Debugging: Keep terminal output clean while storing detailed logs.
-✔ Performance Visualization: Generate insightful plots to analyze model predictions.
-✔ Professional Code Structure: Modularized for scalability and maintainability.
+✔ Data Preprocessing: Clean, transform, and normalize stock market data for machine learning applications.
+✔ Feature Engineering: Identify and select the most impactful features for improved prediction accuracy.
+✔ Model Selection: Automated comparison between XGBoost and MLP to choose the best regression model.
+✔ Hyperparameter Optimization: RandomizedSearchCV to fine-tune the hyperparameters of the models.
+✔ Cross-Validation: Implement robust k-fold cross-validation to improve model generalization.
+✔ Feature Importance Analysis: Understand the key factors affecting stock price predictions.
+✔ Automated Logging & Debugging: Clear terminal output with detailed logging for efficient debugging.
+✔ Performance Visualization: Generate insightful visualizations to assess model performance.
+✔ Professional Code Structure: Modularized code for scalability and maintainability.
 
 📂 Project Structure
 
-📦 aapl-stock-prediction
-│── 📂 data
-│   ├── 📂 raw                  # Original raw dataset (CSV format)
-│   ├── 📂 processed            # Preprocessed and cleaned dataset
-│
-│── 📂 models                   
-│   ├── xgboost_model.py        # XGBoost regression model implementation
-│   ├── mlp_model.py            # TensorFlow MLP model implementation
-│
-│── 📂 evaluation               
-│   ├── evaluation.py           # Model evaluation, performance metrics, and visualizations
-│
-│── 📂 venv                     # Virtual environment for package management
-│
-│── 📜 preprocess.py            # Data preprocessing pipeline
-│── 📜 main.py                   # Main script to run the complete pipeline
-│── 📜 README.md                 # Project documentation
-│── 📜 requirements.txt          # Dependencies for easy setup
+aapl-share-prediction/
+├── .gitignore
+├── LICENSE
+├── main.py
+├── README.md
+├── requirements.txt
+├── data/
+│   ├── processed/
+│   │   └── processed_share_data.csv
+│   └── raw/
+│       └── raw_share_data.csv
+├── src/
+│   ├── _init_.py
+│   ├── data_preprocessing.py
+│   ├── evaluation.py
+│   ├── model.py
+│   └── models/
+│       ├── mlp_model.py
+│       ├── model_comparator.py
+│       └── xgboost_model.py
+└── venv/
 
 🔧 Installation & Setup
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/erenaktuerk/aapl-stock-prediction.git
-cd aapl-stock-prediction
+git clone https://github.com/erenaktuerk/aapl-share-prediction.git
+cd aapl-share-prediction
 
 2️⃣ Create and Activate a Virtual Environment
 
-It is highly recommended to use a virtual environment to keep dependencies organized and avoid conflicts.
+To avoid dependency conflicts, it’s recommended to use a virtual environment:
 
-For Windows (Command Prompt / PowerShell)
+For Windows (Command Prompt / PowerShell):
 
 python -m venv venv
 venv\Scripts\activate
 
-For macOS / Linux
+For macOS / Linux:
 
 python3 -m venv venv
 source venv/bin/activate
 
 3️⃣ Install Dependencies
 
-Once the virtual environment is activated, install all necessary packages:
+After activating the virtual environment, install the necessary packages:
 
 pip install -r requirements.txt
 
 4️⃣ Run the Complete Pipeline
 
+To run the project and start the pipeline:
+
 python main.py
 
 This will:
-✅ Preprocess the data
-✅ Train and optimize the models
-✅ Select the best model automatically
-✅ Generate evaluation metrics and visualizations
+	•	Preprocess the data
+	•	Train and optimize the models
+	•	Automatically select the best model
+	•	Generate performance metrics and visualizations
 
 📊 Data Preprocessing
 
-The dataset consists of Apple Inc. stock price data over a 5-year period. The following steps are performed:
+The dataset used consists of Apple Inc. (AAPL) stock prices over a 5-year period. The following preprocessing steps are performed:
 
-✔ Handling Missing Values: Ensuring data consistency.
-✔ Feature Selection: Keeping only the most relevant columns (Date, Open, High, Low, Close, Volume).
-✔ Normalization & Scaling: Improving model convergence.
-✔ Train-Test Split: Ensuring reliable model evaluation.
+✔ Handling Missing Values: Ensures data consistency.
+✔ Feature Selection: Only relevant columns like Date, Open, High, Low, Close, and Volume are kept.
+✔ Normalization & Scaling: Ensures the model converges effectively.
+✔ Train-Test Split: Splits the data for reliable evaluation.
 
 📈 Machine Learning Models
 
 1️⃣ XGBoost Regressor
-	•	Implements gradient boosting to optimize stock price prediction.
-	•	Highly efficient with early stopping and feature importance analysis.
+
+XGBoost is a powerful gradient boosting algorithm known for its performance and scalability.
+	•	Key Features:
+	•	Efficient gradient boosting for regression tasks.
+	•	Early stopping and feature importance analysis.
 	•	Hyperparameter tuning using RandomizedSearchCV.
 
 Key Parameters Tuned:
-
-✔ learning_rate
-✔ n_estimators
-✔ max_depth
-✔ gamma
-✔ min_child_weight
-✔ reg_lambda
+	•	learning_rate
+	•	n_estimators
+	•	max_depth
+	•	gamma
+	•	min_child_weight
+	•	reg_lambda
 
 2️⃣ Multi-Layer Perceptron (MLP) with TensorFlow
-	•	Implements a deep learning model using tf.keras.
-	•	Fully connected neural network with multiple layers.
-	•	Uses ReLU activation and Adam optimizer for stability.
 
-Architecture:
-	•	Input Layer: Number of selected features
-	•	Hidden Layers: 2-3 layers with Dropout for regularization
-	•	Output Layer: 1 neuron for regression output
-	•	Loss Function: Mean Squared Error (MSE)
+This deep learning model is implemented using tf.keras, a high-level neural networks API.
+	•	Architecture:
+	•	Input Layer: Features from the dataset.
+	•	Hidden Layers: 2-3 layers with Dropout for regularization.
+	•	Output Layer: Single neuron for predicting stock prices.
+	•	Loss Function: Mean Squared Error (MSE) for regression tasks.
 
 🔬 Model Evaluation & Selection
 
-✅ Performance Metrics
-
-Each model is evaluated based on:
+Each model is evaluated based on the following metrics:
 
 ✔ Root Mean Squared Error (RMSE)
 ✔ Mean Absolute Error (MAE)
-✔ R² Score (Coefficient of Determination)
+✔ R² Score
 
-The best-performing model is automatically selected for visualization and final predictions.
+The model with the lowest RMSE and best performance metrics is automatically selected.
 
-📉 Data Visualization
-
-The project generates various plots to analyze model performance:
-
-✔ Actual vs. Predicted Prices
-✔ Error Distribution Plot
-✔ Feature Importance Bar Chart
-
-These plots help in understanding how well the model captures stock price trends.
-
-🛠 Logging & Debugging
-	•	INFO level logs are printed for a clean terminal output.
-	•	DEBUG level logs are saved in logs/ for detailed analysis.
-	•	Ensures efficient debugging without cluttering the user experience.
+Performance Visualizations:
+	•	Actual vs. Predicted Prices: To visualize the model’s prediction accuracy.
+	•	Error Distribution Plot: To visualize the errors in the predictions.
+	•	Feature Importance Bar Chart: To understand which features impact the stock price predictions.
 
 🎯 Why This Project Stands Out
 
-✔ Designed for real-world application in stock price forecasting.
-✔ Uses advanced machine learning & deep learning techniques.
-✔ Highly optimized feature selection & hyperparameter tuning.
-✔ Scalable, well-documented, and modular code structure.
-✔ Fully automated model selection and evaluation.
-✔ Professional and production-ready implementation.
+This project is a comprehensive, end-to-end machine learning solution tailored to predict stock prices with both traditional regression and deep learning methods.
 
-This project is not just a simple ML model—it is a high-performance, industry-standard solution that demonstrates expertise in data science, machine learning engineering, and financial analytics.
+Why it’s impressive:
+	•	Practical application: Stock price forecasting has significant real-world value, especially in financial analytics.
+	•	Advanced Techniques: XGBoost and MLP represent modern machine learning techniques. The use of RandomizedSearchCV and cross-validation ensures optimal model performance.
+	•	Feature Engineering: Thoughtful feature selection and normalization ensure that the data is ready for optimal model performance.
+	•	Code Modularity: The well-structured, modularized code is designed for scalability and maintainability in production environments.
 
-📜 Future Enhancements
+🛠 Logging & Debugging
 
-🔹 Add LSTM (Long Short-Term Memory) model for time-series forecasting.
-🔹 Incorporate sentiment analysis from financial news to improve predictions.
-🔹 Deploy the model using a REST API for real-time predictions.
-🔹 Optimize MLP architecture with additional regularization techniques.
+Efficient logging ensures that users can debug the pipeline without cluttering the terminal output:
+	•	INFO level logs: Clean, user-friendly terminal output.
+	•	DEBUG level logs: Stored in logs/ directory for detailed analysis.
 
-💡 Final Thoughts
+💡 Future Enhancements
 
-This project is a complete, end-to-end machine learning system that leverages both traditional regression techniques and deep learning. It showcases expertise in data preprocessing, feature engineering, model optimization, and performance analysis.
+Future improvements for the project could include:
+	•	LSTM for Time-Series Forecasting: Integrate Long Short-Term Memory networks for more accurate predictions on time-series data.
+	•	Sentiment Analysis: Include sentiment analysis from financial news to potentially improve stock price predictions.
+	•	Model Deployment: Deploy the model using a REST API to provide real-time stock predictions.
+	•	Model Optimization: Further hyperparameter tuning and testing of additional models.
 
-If you find this project useful, feel free to ⭐ Star the repository and contribute! 🚀
+📜 Lessons Learned
+
+This project not only demonstrates the capability to work with advanced regression models and deep learning but also the importance of effective data preprocessing, feature engineering, and model optimization.
+
+Key Takeaways:
+	•	Hyperparameter tuning is critical for improving model performance.
+	•	Data quality and preprocessing directly influence prediction accuracy.
+	•	Continuous model evaluation and improvement are necessary for high-performance systems.
 
 📩 Contact & Contributions
 
-For any questions or improvements, feel free to reach out:
+For any questions, suggestions, or improvements, feel free to reach out:
 
 📧 erenaktuerk@hotmail.com
 🌐 github.com/erenaktuerk
 
-Want to contribute? Fork this repository, create a feature branch, and submit a pull request! 🚀
+Want to contribute? Fork the repository, create a feature branch, and submit a pull request! 🚀

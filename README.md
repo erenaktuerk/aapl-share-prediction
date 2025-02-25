@@ -9,13 +9,21 @@ This project showcases a highly optimized pipeline with a focus on data preproce
 🚀 Key Features
 
 ✔ Data Preprocessing: Clean, transform, and normalize stock market data for machine learning applications.
+
 ✔ Feature Engineering: Identify and select the most impactful features for improved prediction accuracy.
+
 ✔ Model Selection: Automated comparison between XGBoost and MLP to choose the best regression model.
+
 ✔ Hyperparameter Optimization: RandomizedSearchCV to fine-tune the hyperparameters of the models.
+
 ✔ Cross-Validation: Implement robust k-fold cross-validation to improve model generalization.
+
 ✔ Feature Importance Analysis: Understand the key factors affecting stock price predictions.
+
 ✔ Automated Logging & Debugging: Clear terminal output with detailed logging for efficient debugging.
+
 ✔ Performance Visualization: Generate insightful visualizations to assess model performance.
+
 ✔ Professional Code Structure: Modularized code for scalability and maintainability.
 
 📂 Project Structure

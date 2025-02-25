@@ -98,8 +98,11 @@ This will:
 The dataset used consists of Apple Inc. (AAPL) stock prices over a 5-year period. The following preprocessing steps are performed:
 
 ✔ Handling Missing Values: Ensures data consistency.
+
 ✔ Feature Selection: Only relevant columns like Date, Open, High, Low, Close, and Volume are kept.
+
 ✔ Normalization & Scaling: Ensures the model converges effectively.
+
 ✔ Train-Test Split: Splits the data for reliable evaluation.
 
 📈 Machine Learning Models
@@ -107,26 +110,40 @@ The dataset used consists of Apple Inc. (AAPL) stock prices over a 5-year period
 1️⃣ XGBoost Regressor
 
 XGBoost is a powerful gradient boosting algorithm known for its performance and scalability.
-	•	Key Features:
+
+- Key Features:
+ 
 	•	Efficient gradient boosting for regression tasks.
+
 	•	Early stopping and feature importance analysis.
+
 	•	Hyperparameter tuning using RandomizedSearchCV.
 
 Key Parameters Tuned:
+
 	•	learning_rate
+ 
 	•	n_estimators
+ 
 	•	max_depth
+ 
 	•	gamma
+ 
 	•	min_child_weight
+ 
 	•	reg_lambda
 
 2️⃣ Multi-Layer Perceptron (MLP) with TensorFlow
 
 This deep learning model is implemented using tf.keras, a high-level neural networks API.
 	•	Architecture:
+ 
 	•	Input Layer: Features from the dataset.
+ 
 	•	Hidden Layers: 2-3 layers with Dropout for regularization.
+ 
 	•	Output Layer: Single neuron for predicting stock prices.
+ 
 	•	Loss Function: Mean Squared Error (MSE) for regression tasks.
 
 🔬 Model Evaluation & Selection
@@ -134,14 +151,19 @@ This deep learning model is implemented using tf.keras, a high-level neural netw
 Each model is evaluated based on the following metrics:
 
 ✔ Root Mean Squared Error (RMSE)
+
 ✔ Mean Absolute Error (MAE)
+
 ✔ R² Score
 
 The model with the lowest RMSE and best performance metrics is automatically selected.
 
 Performance Visualizations:
+
 	•	Actual vs. Predicted Prices: To visualize the model’s prediction accuracy.
+ 
 	•	Error Distribution Plot: To visualize the errors in the predictions.
+ 
 	•	Feature Importance Bar Chart: To understand which features impact the stock price predictions.
 
 🎯 Why This Project Stands Out
@@ -149,23 +171,33 @@ Performance Visualizations:
 This project is a comprehensive, end-to-end machine learning solution tailored to predict stock prices with both traditional regression and deep learning methods.
 
 Why it’s impressive:
+
 	•	Practical application: Stock price forecasting has significant real-world value, especially in financial analytics.
+ 
 	•	Advanced Techniques: XGBoost and MLP represent modern machine learning techniques. The use of RandomizedSearchCV and cross-validation ensures optimal model performance.
+ 
 	•	Feature Engineering: Thoughtful feature selection and normalization ensure that the data is ready for optimal model performance.
+ 
 	•	Code Modularity: The well-structured, modularized code is designed for scalability and maintainability in production environments.
 
 🛠 Logging & Debugging
 
 Efficient logging ensures that users can debug the pipeline without cluttering the terminal output:
+
 	•	INFO level logs: Clean, user-friendly terminal output.
+ 
 	•	DEBUG level logs: Stored in logs/ directory for detailed analysis.
 
 💡 Future Enhancements
 
 Future improvements for the project could include:
+
 	•	LSTM for Time-Series Forecasting: Integrate Long Short-Term Memory networks for more accurate predictions on time-series data.
+ 
 	•	Sentiment Analysis: Include sentiment analysis from financial news to potentially improve stock price predictions.
+ 
 	•	Model Deployment: Deploy the model using a REST API to provide real-time stock predictions.
+ 
 	•	Model Optimization: Further hyperparameter tuning and testing of additional models.
 
 📜 Lessons Learned

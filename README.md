@@ -84,9 +84,13 @@ To run the project and start the pipeline:
 python main.py
 
 This will:
+
 	•	Preprocess the data
+ 
 	•	Train and optimize the models
+ 
 	•	Automatically select the best model
+ 
 	•	Generate performance metrics and visualizations
 
 📊 Data Preprocessing
